@@ -44,9 +44,12 @@
                             <div class="col-md-6">
                                 <div class="captcha">
                                     <span>{!! captcha_img() !!}</span>
+                                    <br>
+                                    <br>
                                     <button type="button" class="btn btn-success btn-refresh">Refresh</button>
                                 </div>
-                                <input type="text" id="captcha"  placeholder="Enter Captcha" name="captcha" class="form-control @error('password') is-invalid @enderror" required >
+                                <br>
+                                <input type="text" id="captcha"  placeholder="Enter Captcha" name="captcha" class="form-control @error('captcha') is-invalid @enderror" required >
 
                                 @error('captcha')
                                     <span class="invalid-feedback" role="alert">
