@@ -29,3 +29,6 @@ Route::get('/kategori_berita/{id}','KategoriBeritaController@show')->name('kateg
 
 Route::get('/kategori_galeri', 'KategoriGaleriController@index')->name('kategori_galeri.index');
 Route::get('/kategori_galeri/{id}','KategoriGaleriController@show')->name('kategori_galeri.show');
+
+Route::get('/kategori_pengumuman', 'KategoriPengumumanController@index')->name('kategori_pengumuman.index');
+Route::get('/kategori_pengumuman/{id}','KategoriPengumumanController@show')->name('kategori_pengumuman.show');
