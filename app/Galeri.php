@@ -6,10 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galeri extends Model
 {
+    protected $guarded = array();
     protected $table='galeri';
 
     protected $fillabel=[
-        'nama', 'keterangan', 'path', 'users_id'
+        'nama', 'keterangan', 'path', 'users_id', 'kategori_galeri_id'
     ];
 
     protected $casts=[

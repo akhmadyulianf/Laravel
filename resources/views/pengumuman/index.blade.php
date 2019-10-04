@@ -7,13 +7,14 @@
             <div class="card">
                 <div class="card-header">List Pengumuman</div>                
                 <div class="card-body">
-           
+                <a href="{!! route('pengumuman.create') !!}" class="btn btn-primary">Tambahkan Data</a>
                 <table border="1">
                     <tr>
                         <td>ID</td>
                         <td>Judul</td>
                         <td>Isi</td>
                         <td>Users Id</td>
+                        <td>Kategori Id</td>
                         <td>Create</td>
                         <td>Aksi</td>
                     </tr>
@@ -25,6 +26,7 @@
                         <td>{!! $item->judul !!}</td>
                         <td>{!! $item->isi !!}</td>
                         <td>{!! $item->users_id !!}</td>
+                        <td>{!! $item->kategori_pengumuman_id !!}</td>
                         <td>{!! $item->created_at->format('d/m/Y H:i') !!}</td>
                         <td>
                             <a href="{!! route('pengumuman.show' ,[$item->id]) !!}"  
