@@ -11,13 +11,13 @@
                 <table border="1">
                         
                     <tr>
-                        <td><center>ID</center></td>
-                        <td><center>Nama</center></td>
-                        <td><center>Keterangan</center></td>
-                        <td><center>Path</center></td>
-                        <td><center>Users Id</center></td>
-                        <td><center>Create</center></td>
-                        <td><center>Aksi</center></td>
+                        <td>ID</td>
+                        <td>Nama</td>
+                        <td>Keterangan</td>
+                        <td>Path</td>
+                        <td>Users Id</td>
+                        <td>Create</td>
+                        <td>Aksi</td>
                     </tr>
                         
 
