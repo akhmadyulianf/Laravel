@@ -9,12 +9,13 @@
                 <div class="card-body">
                 <a href="{!! route('kategori_berita.create') !!}" class="btn btn-primary">Tambahkan Data</a>
            
-                <table border="1">
-                    <tr>
+                <table class="table table-bordered table-primary">
+                    <tr class="table table-bordered table-dark">
                         <td>ID</td>
                         <td>Nama</td>
                         <td>Users Id</td>
                         <td>Create</td>
+                        <td>Update</td>
                         <td>Aksi</td>
                     </tr>
 
@@ -25,9 +26,12 @@
                         <td>{!! $item->nama !!}</td>
                         <td>{!! $item->users_id !!}</td>
                         <td>{!! $item->created_at->format('d/m/Y H:i') !!}</td>
+                        <td>{!! $item->updated_at->format('d/m/Y H:i') !!}</td>
                         <td>
                             <a href="{!! route('kategori_berita.show' ,[$item->id]) !!}"  
                                 class="btn btn-sm btn-primary">Lihat</a>
+                            <a href="{!! route('kategori_berita.edit' ,[$item->id]) !!}"  
+                                class="btn btn-sm btn-warning">Ubah</a>
                     </tr>
 
                         @endforeach

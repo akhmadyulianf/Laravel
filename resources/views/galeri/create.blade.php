@@ -7,9 +7,9 @@
             <div class="card">
                 <div class="card-header">Tambah Galeri</div>                
                 <div class="card-body">
-                    <form method="post" action="{!! route('galeri.store') !!}">
+                {!! Form::open(['route' => 'galeri.store', 'method' => 'post']) !!}
                     @include('galeri.form')
-
+                {!! Form::close() !!}
                     </form>
                 </div>
             </div>

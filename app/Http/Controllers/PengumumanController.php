@@ -38,5 +38,26 @@ class PengumumanController extends Controller
 
         return redirect(route('pengumuman.index'));
     }
+    public function edit($id){
+        $Pengumuman=Pengumuman::find($id);
+        $kategoriPengumuman= KategoriPengumuman::pluck('nama', 'id');
+
+        if(empty($Pengumuman)){
+            return redirect(route('pengumuman.index'));
+        }
+        return view('pengumuman.edit', compact('Pengumuman', 'kategoriPengumuman'));
+    }
+    public function update($id,Request $request){
+        $Pengumuman=Pengumuman::find($id);
+        $input= $request->all();
+
+        if(empty($Pengumuman)){
+            return redirect(route('pengumuman.index'));
+        }
+
+        $Pengumuman->update($input);
+
+        return redirect(route('pengumuman.index'));
+    }
 }
 

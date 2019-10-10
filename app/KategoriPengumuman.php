@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class KategoriPengumuman extends Model
 {
-    protected $guarded = array();
     protected $table='kategori_pengumuman';
 
-    protected $fillabel=[
+    protected $fillable=[
         'nama', 'users_id'
     ];
     protected $casts=[

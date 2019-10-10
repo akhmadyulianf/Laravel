@@ -7,11 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class KategoriArtikel extends Model
 {
-    protected $guarded = array();
 
     protected $table='kategori_artikel';
 
-    protected $fillabel=[
+    protected $fillable=[
         'nama', 'users_id'
     ];
 

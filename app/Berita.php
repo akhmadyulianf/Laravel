@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Berita extends Model
 {
-    protected $guarded = array();
     protected $table='berita';
 
-    protected $fillabel=[
+    protected $fillable=[
         'judul', 'isi', 'users_id','kategori_berita_id'
     ];
 

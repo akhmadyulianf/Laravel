@@ -7,10 +7,9 @@
             <div class="card">
                 <div class="card-header">Tambah Pengumuman</div>                
                 <div class="card-body">
-                {!! Form::open(['route' => 'pengumuman.store', 'method' => 'post']) !!}
+                {!! Form::model($Pengumuman, ['route' => ['pengumuman.update', $Pengumuman->id], 'method'=>'patch']) !!}
                     @include('pengumuman.form')
                 {!! Form::close() !!}
-                    </form>
                 </div>
             </div>
         </div>
@@ -18,7 +17,6 @@
 </div>
 
 @endsection
-
 @section('scripts')
     <script src="https://cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
     <script>
@@ -28,5 +26,3 @@
     </script>
 
 @endsection
-      
- 

@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artikel extends Model
 {
-    protected $guarded = array();
     protected $table='artikel';
 
-    protected $fillabel=[
+    protected $fillable=[
         'judul', 'isi', 'users_id','kategori_artikel_id'
     ];
 

@@ -3,19 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">List Pengumuman</div>                
                 <div class="card-body">
                 <a href="{!! route('pengumuman.create') !!}" class="btn btn-primary">Tambahkan Data</a>
-                <table border="1">
-                    <tr>
+                <table class="table table-bordered table-primary">
+                    <tr class="table table-bordered table-dark">
                         <td>ID</td>
                         <td>Judul</td>
                         <td>Isi</td>
                         <td>Users Id</td>
                         <td>Kategori Id</td>
                         <td>Create</td>
+                        <td>Update</td>
                         <td>Aksi</td>
                     </tr>
 
@@ -28,9 +29,12 @@
                         <td>{!! $item->users_id !!}</td>
                         <td>{!! $item->kategori_pengumuman_id !!}</td>
                         <td>{!! $item->created_at->format('d/m/Y H:i') !!}</td>
+                        <td>{!! $item->updated_at->format('d/m/Y H:i') !!}</td>
                         <td>
                             <a href="{!! route('pengumuman.show' ,[$item->id]) !!}"  
                                 class="btn btn-sm btn-danger">Lihat</a>
+                                <a href="{!! route('pengumuman.edit' ,[$item->id]) !!}"  
+                                class="btn btn-sm btn-warning">Ubah</a>
                     </tr>
 
                         @endforeach

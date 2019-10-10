@@ -6,10 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Galeri extends Model
 {
-    protected $guarded = array();
     protected $table='galeri';
 
-    protected $fillabel=[
+    protected $fillable=[
         'nama', 'keterangan', 'path', 'users_id', 'kategori_galeri_id'
     ];
 
