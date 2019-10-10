@@ -33,9 +33,14 @@
                         <td>{!! $item->updated_at->format('d/m/Y H:i') !!}</td>
                         <td>
                             <a href="{!! route('galeri.show' ,[$item->id]) !!}"  
-                                class="btn btn-sm btn-danger">Lihat</a>
+                                class="btn btn-sm btn-success">Lihat</a>
                                 <a href="{!! route('galeri.edit' ,[$item->id]) !!}"  
                                 class="btn btn-sm btn-warning">Ubah</a>
+                                {!! Form::open(['route' => ['galeri.destroy', $item->id], 'method'=>'delete']) !!}
+                                
+                                {!! Form::submit('Hapus',['class'=>'btn btn-sm btn-danger','onclick'=>"return confirm('Apakah Anda Yakin Menghapus Data Ini?')"]) !!}
+                                
+                                {!! Form::close() !!}
                     </tr>
 
                         @endforeach

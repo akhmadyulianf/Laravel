@@ -59,5 +59,14 @@ class BeritaController extends Controller
 
         return redirect(route('berita.index'));
     }
+    public function destroy($id){
+        $Berita=Berita::find($id);
+     
+        if(empty($Berita)){
+            return redirect(route('berita.index'));
+        }
+        $Berita->delete();
+        return redirect(route('berita.index'));
+    }
 }
 
