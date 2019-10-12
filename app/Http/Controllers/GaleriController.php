@@ -68,5 +68,10 @@ class GaleriController extends Controller
         $Galeri->delete();
         return redirect(route('galeri.index'));
     }
+    public function trash(){
+    
+        $listGaleri=Galeri::onlyTrashed(); 
+        return view('galeri.index' ,compact('listGaleri'));
+    }
 }
 
