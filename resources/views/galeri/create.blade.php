@@ -7,7 +7,7 @@
             <div class="card">
                 <div class="card-header">Tambah Galeri</div>                
                 <div class="card-body">
-                {!! Form::open(['route' => 'galeri.store', 'method' => 'post']) !!}
+                {!! Form::open(['route' => 'galeri.store','files'=>true]) !!}
                     @include('galeri.form')
                 {!! Form::close() !!}
                     </form>

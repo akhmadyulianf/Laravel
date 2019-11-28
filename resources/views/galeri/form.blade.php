@@ -28,8 +28,7 @@
 <div class="form-group row">
         <label for="path" class="col-md-2 col-form-label text-md-right">{{ __('Path') }}</label>
             <div class="col-md-10">
-                <input id="path" type="text" class="form-control @error('path') is-invalid @enderror" name="path" value="{{ old('path') }}" required autofocus>
-
+            {!! Form::file('path', null,['class'=>'form-control'] ); !!}
              @error('path')
               <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -56,7 +55,7 @@
                     <button type="submit" class="btn btn-primary">
                     {{ __('Simpan Data') }}
                     </button>
-                    <a href="{!! route('kategori_galeri.index') !!}" class="btn btn-danger">
+                    <a href="{!! route('galeri.index') !!}" class="btn btn-danger">
                     {{ __('Batal') }}
                     </a>
                 </div>
